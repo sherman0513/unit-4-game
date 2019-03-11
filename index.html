@@ -6,38 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
-
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
-
+<body background="assets/images/legos3.jpg">
     <div class="container">
-        <h1>Lego Collector</h1>
+        <div class="row">
+            <div class="col-12 jumbotron bg-success">
+                <h1 class="text-center"><img src="assets/images/lego5.jpg"></h1>
+            </div>
+        </div>
 
-        <h1>Number to Guess:</h1>
-        <h1 id="number-to-guess"></h1>
+        <div class="row bg-info">
+            <div class="col-12">
+                <div class="text-center"><strong>Instructions</strong></div>
+            </div>
 
-        <div id="legos"></div>
+            <div class="col-12">
+                -You will be given a random number at the start of the game.
+                <br><br>
+                -There are four lego items below. By clicking on a lego, you will add a specific amount of points to
+                your total score.
+                <br><br>
+                -You win the game by matching your total score to the random number. You lose the game if your total
+                score goes above the random number.
+                <br><br>
+                -The value of each lego is hidden from you until you click on it.
+                <br><br>
+                -Each time when the game starts, the game will change the values of each lego.
+                <br><br>
+            </div>
+        </div>
 
-        <h1>Total Score</h1>
-        <div id="total-score"></div>
-
-        <h1>Wins</h1>
-        <div id="wins"></div>
-
-        <h1>Losses</h1>
-        <div is="losses"></div>
-        
-        
-        
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-        <script type="text/javascript" src="assets/javascript/game.js"></script>
+        <div class="row bg-white">
+            <div class="col-12 text-center">
+                <img src="assets/images/legos.jpg" class="m-3" id="one">
+                <img src="assets/images/legos1.jpg" class="m-3" id="two">
+            </div>
+            <div class="col-12 text-center">>
+                <img src="assets/images/legos2.jpg" class="m-3" id="three">
+                <img src="assets/images/legos4.jpg" class="m-3" id="four">
+            </div>
+        </div>
+        <div class="row bg-info">
+            <div class="col-6">
+                <h4>Number to match: <span id="number"></span></h4>
+                <h4>Your number: <span id="Combined"></span></h4>
+            </div>
+            <div class="col-6">
+                <h4>
+                    Wins: <span id="numberWins"></span>
+                    <br>
+                    Losses: <span id="numberLosses"></span>
+                </h4>
+            </div>
+        </div>
 
     </div>
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="assets/javascript/game.js"></script>
 </body>
 
 </html>
